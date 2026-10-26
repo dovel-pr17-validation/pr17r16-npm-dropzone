@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["unicorn", "oxc"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "caughtErrors": "none"
+      }
+    ]
+  },
+  "env": {
+    "builtin": true,
+    "browser": true
+  },
+  "ignorePatterns": [
+    "apps/docs/build/**",
+    "apps/docs/.docusaurus/**",
+    "apps/website/build/**",
+    "apps/website/.svelte-kit/**"
+  ]
+}

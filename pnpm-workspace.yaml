@@ -1,0 +1,17 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+
+allowBuilds:
+  "@parcel/watcher": true
+  # Docusaurus pulls core-js, which prints a postinstall banner.
+  core-js: true
+  # An unused optional peer of Docusaurus's webpack minimizers, left over in
+  # the lockfile from the old website toolchain. Nothing invokes it, so there
+  # is no reason to compile its binary.
+  esbuild: false
+  # lightningcss-cli pulls this in; both fetch a native binary on install.
+  lightningcss: true
+  # Its postinstall fetches the platform's native binary, which is the whole
+  # package -- without it there is nothing to run.
+  lightningcss-cli: true
