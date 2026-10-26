@@ -60,7 +60,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@vitest/browser-playwright": "^4.1.11",
+    "@vitest/browser-playwright": "^5.0.5",
     "@vitest/coverage-v8": "^4.1.11",
     "lightningcss-cli": "^1.33.0",
     "typescript": "^6.0.3",
